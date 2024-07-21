@@ -1,15 +1,15 @@
-#ƒx[ƒXƒCƒ[ƒW
-FROM python:3.7.2
+#ï¿½xï¿½[ï¿½Xï¿½Cï¿½ï¿½ï¿½[ï¿½W
+FROM python:3.13.0b3
 
-#Dockerfile‚Æ“¯ƒfƒBƒŒƒNƒgƒŠ‚É‚ ‚éappƒtƒHƒ‹ƒ_‚ðƒRƒ“ƒeƒi“à•”‚Ö’Ç‰Á
+#Dockerfileï¿½Æ“ï¿½ï¿½fï¿½Bï¿½ï¿½ï¿½Nï¿½gï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½appï¿½tï¿½Hï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½eï¿½iï¿½ï¿½ï¿½ï¿½ï¿½Ö’Ç‰ï¿½
 ADD app /app
 
-#Dockerfileƒrƒ‹ƒhŽž‚ÉŽÀs‚³‚ê‚éƒRƒ}ƒ“ƒh
+#Dockerfileï¿½rï¿½ï¿½ï¿½hï¿½ï¿½ï¿½ÉŽï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½}ï¿½ï¿½ï¿½h
 RUN pip install --upgrade pip
 RUN pip install -r /app/requirements.txt
 
-# workdirectory ì¬
+# workdirectory ï¿½ì¬
 WORKDIR /app
 
-#ƒRƒ“ƒeƒi‹N“®Žž‚ÉŽÀs‚³‚ê‚éƒRƒ}ƒ“ƒh
+#ï¿½Rï¿½ï¿½ï¿½eï¿½iï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½ÉŽï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½Rï¿½}ï¿½ï¿½ï¿½h
 CMD python -u main.py
